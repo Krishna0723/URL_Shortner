@@ -6,7 +6,7 @@ async function generateShortURL(req, res) {
   const ORG_URL = req.body;
   // console.log(ORG_URL);
 
-  if (!ORG_URL.url) return res.status(400).json({ error: "url is requires" });
+  if (!ORG_URL.url) return res.status(400).json({ error: "url is required" });
   await URL.create({
     shortId: shortId,
     reDirectURL: ORG_URL.url,
